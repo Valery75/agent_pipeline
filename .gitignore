@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+outputs/
+*.jpg
+*.jpeg
+*.png
+*.webp
+/tmp/

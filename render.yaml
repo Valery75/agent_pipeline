@@ -1,0 +1,21 @@
+services:
+  - type: worker
+    name: swimwear-video-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: LLM_PROVIDER
+        value: openai
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-4-6
+      - key: OUTPUT_DIR
+        value: outputs
